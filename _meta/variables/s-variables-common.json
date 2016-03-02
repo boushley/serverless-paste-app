@@ -1,0 +1,6 @@
+{
+  "project": "basic-app",
+  "projectBucket": "serverless.us-west-2.com.blueshiftcode.basic-app",
+  "domain": "com.blueshiftcode.basic-app",
+  "notificationEmail": "boushley@blueshiftcode.com"
+}
