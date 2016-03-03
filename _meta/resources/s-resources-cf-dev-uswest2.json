@@ -39,6 +39,14 @@
                 "logs:PutLogEvents"
               ],
               "Resource": "arn:aws:logs:us-west-2:*:*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
+                "dynamodb:PutItem",
+                "dynamodb:Query"
+              ],
+              "Resource": "arn:aws:dynamodb:us-west-2:135144577494:table/us-west-2-dev-pastes"
             }
           ]
         },
@@ -47,6 +55,28 @@
             "Ref": "IamRoleLambda"
           }
         ]
+      }
+    },
+    "PasteDynamoTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "id",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "id",
+            "KeyType": "HASH"
+          }
+        ],
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": "1",
+          "WriteCapacityUnits": "1"
+        },
+        "TableName": "us-west-2-dev-pastes"
       }
     }
   },

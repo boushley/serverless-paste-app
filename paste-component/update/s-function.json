@@ -1,8 +1,8 @@
 {
-  "name": "create",
+  "name": "update",
   "customName": false,
   "customRole": false,
-  "handler": "create/handler.handler",
+  "handler": "update/handler.handler",
   "timeout": 6,
   "memorySize": 1024,
   "custom": {
@@ -11,14 +11,19 @@
   },
   "endpoints": [
     {
-      "path": "api/paste",
-      "method": "POST",
+      "path": "api/paste/{id}",
+      "method": "PUT",
       "type": "AWS",
       "authorizationType": "none",
       "apiKeyRequired": false,
       "requestParameters": {},
       "requestTemplates": {
-        "application/json": ""
+        "application/json": {
+          "params": {
+            "id": "$input.params('id')"
+          },
+          "body" : "$input.json('$')"
+        }
       },
       "responses": {
         "400": {

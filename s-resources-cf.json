@@ -39,6 +39,14 @@
                 "logs:PutLogEvents"
               ],
               "Resource": "arn:aws:logs:${region}:*:*"
+            },
+            {
+              "Effect": "Allow",
+              "Action": [
+                "dynamodb:PutItem",
+                "dynamodb:Query"
+              ],
+              "Resource": "arn:aws:dynamodb:us-west-2:135144577494:table/${region}-${stage}-pastes"
             }
           ]
         },

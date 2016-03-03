@@ -1,5 +1,6 @@
 {
   "region": "us-west-2",
   "resourcesStackName": "basic-app-dev-l",
-  "iamRoleArnLambda": "arn:aws:iam::135144577494:role/basic-app-dev-l-IamRoleLambda-6595J011Q48N"
+  "iamRoleArnLambda": "arn:aws:iam::135144577494:role/basic-app-dev-l-IamRoleLambda-6595J011Q48N",
+  "apiGatewayApi": "basic-app"
 }
