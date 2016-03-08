@@ -4,14 +4,28 @@
         <meta charset="utf-8">
         <title>Serverless Pastebin</title>
         <meta name="description" content="">
+        <link rel="stylesheet" href="/app.css">
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <h1><a href="http://serverless.com">Serverless</a> Pastes</h1>
+        <h1><a href="http://serverless.com" target="_blank">Serverless</a> Pastes</h1>
 
+        <div id="app">
+            <div id="create-page">
+                <textarea id="paste-contents"></textarea><br />
+                <a href="javascript:;" data-create>Create Paste</a>
+            </div>
+            <div id="view-page">
+                <pre id="paste-display">
+                </pre><br />
+                <a href="javascript:;" data-goto-create>Create New Paste</a>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="/app.js"></script>
         <script>
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-51085893-3','auto');ga('send','pageview')
