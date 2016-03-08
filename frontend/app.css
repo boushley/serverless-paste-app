@@ -1,20 +1,83 @@
-#create-page {
+h1 {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+h1, h1 a, h1 a:visited {
+    color: #1c0def;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Menlo, Monaco, Consolas;
+    background-color: #e6ee76;
+    color: #1c0def;
+
+    margin: 0;
+    height: 100%;
+}
+
+#app {
+    width: calc(100% - 40px);
+    height: calc(100% - 100px);
+    margin: 20px;
+}
+
+.app-display {
+    width: 100%;
+    height: 100%;
     display: none;
 }
+
 .create #create-page {
     display: block;
 }
 
-#view-page {
-    display: none;
-}
 .view #view-page {
     display: block;
 }
 
 #paste-contents {
     width: 100%;
-    max-height: 100%
-    min-height: 100px;
+    height: calc(100% - 60px);
+
+    color: #1c0def;
+    font-size: 16px;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
 }
 
+#paste-display {
+    width: 100%;
+    height: calc(100% - 60px);
+
+    font-size: 16px;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+.controls {
+    padding: 10px 0;
+    height: 40px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+
+    border-radius: 5px;
+
+    background-color: rgba(239, 21, 13, 0.8);
+    padding: 10px 0;
+    width: 150px;
+}

@@ -14,14 +14,18 @@
         <h1><a href="http://serverless.com" target="_blank">Serverless</a> Pastes</h1>
 
         <div id="app">
-            <div id="create-page">
-                <textarea id="paste-contents"></textarea><br />
-                <a href="javascript:;" data-create>Create Paste</a>
+            <div id="create-page" class="app-display">
+                <textarea id="paste-contents"></textarea>
+                <div class="controls">
+                    <a href="javascript:;" class="btn" data-create>Create Paste</a>
+                </div>
             </div>
-            <div id="view-page">
+            <div id="view-page" class="app-display">
                 <pre id="paste-display">
-                </pre><br />
-                <a href="javascript:;" data-goto-create>Create New Paste</a>
+                </pre>
+                <div class="controls">
+                    <a href="javascript:;" class="btn" data-goto-create>Create New Paste</a>
+                </div>
             </div>
         </div>
 

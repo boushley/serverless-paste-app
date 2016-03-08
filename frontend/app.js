@@ -18,6 +18,7 @@ function processState() {
         container.classList.add('create');
         container.classList.remove('view');
         createElement.value = '';
+        createElement.focus();
     } else if (view.page === 'view') {
         container.classList.add('view');
         container.classList.remove('create');
@@ -82,6 +83,8 @@ function startsWith(subject, test) {
 }
 
 function setupListeners() {
+    window.addEventListener('popstate', processState);
+
     container.addEventListener('click', function (event) {
         if (event.target.getAttribute('data-goto-create') === '') {
             navigateTo({page: 'create'});
